@@ -1,0 +1,17 @@
+<div class="row" style="margin-top: 40px;">
+    <div class="col-md-6">
+        <img class="book-cover img-fluid" [src]="'assets/images/' + book.ISBN + '.jpg'" alt="Book Cover">
+    </div>
+    <div class="col-md-6">
+        <div *ngIf="book" class="card">
+            <div class="card-body">
+                <h2 class="card-title">{{ book.NASLOV }}</h2>
+                <p class="card-text">Autor: {{ book.AUTOR }}</p>
+                <p class="card-text">Zanr: {{ book.ZANR }}</p>
+                <p class="card-text"><strong>Cena: {{ book.CENA }}</strong></p>
+                <p class="card-text">Broj prodatih: {{ book.BROJPRODATIH }}</p>
+            </div>
+            <button class="btn btn-primary" (click)="addToCart()">Dodaj u korpu</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+.book-card-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 10px;
+}
+
+.book-card {
+    flex: 0 0 auto;
+    width: 200px;
+    /* Adjust this value to fit the desired card width */
+    margin-right: 10px;
+}
+
+.book-card:last-child {
+    margin-right: 0;
+}

@@ -1,0 +1,8 @@
+<div class="card">
+    <div class="details">
+        <a [href]="'/Book?ISBN='+book.ISBN"><img [src]="'assets/images/' + book.ISBN + '.jpg'" alt="Book Cover"></a>
+        <h2 class="text-danger">{{ book.NAZIV }}</h2>
+        <p class="text-dark">Autor: {{ book.AUTOR }}</p>
+        <p class="text-dark">Cena: {{ book.CENA }}</p>
+    </div>
+</div>

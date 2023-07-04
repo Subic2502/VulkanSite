@@ -1,0 +1,26 @@
+<div *ngIf="cartItems.length > 0">
+    <h2>Your Cart:</h2>
+    <div *ngFor="let item of cartItems; let i = index">
+        <h2>{{ item.NAZIV }}</h2>
+        <p>Author: {{ item.AUTOR }}</p>
+        <p>Genre: {{ item.ZANR }}</p>
+        <p>Price: {{ item.CENA }}</p>
+        <p>Sold: {{ item.BROJPRODATIH }}</p>
+        <p>Quantity: {{ item.quantity }}</p>
+    
+        <div>
+            <button (click)="updateQuantity(i, item.quantity - 1)">Decrease Quantity</button>
+            <button (click)="updateQuantity(i, item.quantity + 1)">Increase Quantity</button>
+            <button (click)="removeItem(i)">Remove Item</button>
+        </div>
+    </div>
+    Konacna cena:{{finalPrice}}
+    <a href="/Cekaut"><button>Dovrsi kupovinu</button></a>
+
+
+</div>
+
+<div *ngIf="cartItems.length === 0">
+    <p>Your cart is empty.</p>
+</div>
+<button (click)="removeEverything()">Obrisi sve</button>

@@ -1,0 +1,11 @@
+<div class="book-list">
+    <div class="col-12 text-center">
+        <h2>{{message}}</h2>
+        <a [href]="'/Zanr?ZANR='+tip"><small class="text-muted">Prikazi sve</small></a>
+    </div>
+    <div class="book-card-container">
+        <div class="book-card" *ngFor="let book of books">
+            <app-book-card [book]="book"></app-book-card>
+        </div>
+    </div>
+</div>
